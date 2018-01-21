@@ -22,6 +22,7 @@ import (
 	"io"
 	"net/url"
 	"time"
+	"encoding/json"
 )
 
 // ListJobsOptions are options for two list apis
@@ -64,6 +65,7 @@ type Job struct {
 	Status    string     `json:"status"`
 	Tag       bool       `json:"tag"`
 	User      *User      `json:"user"`
+	Coverage  json.Number `json:"coverage"`
 }
 
 // ListProjectJobs gets a list of jobs in a project.
